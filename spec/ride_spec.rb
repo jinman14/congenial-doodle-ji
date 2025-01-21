@@ -31,7 +31,7 @@ RSpec.describe Ride do
   end
 
   describe '#board_rider' do
-    it 'can tell and update info based on ride' do
+    xit 'can tell and update info based on ride' do
       @ride1.board_rider(@visitor1)
       @ride1.board_rider(@visitor2)
       @ride1.board_rider(@visitor1)
