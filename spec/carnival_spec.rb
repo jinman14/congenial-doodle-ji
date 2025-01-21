@@ -119,3 +119,11 @@ RSpec.describe Carnival do
     end
   end
 end
+
+# visitors: [@visitor1, @visitor2, @visitor3],
+#                                           rides: [{ ride: @ride1,
+#                                                     riders: [@visitor1, @visitor2],
+#                                                     total_revenue: 3},
+#                                                   { ride: @ride3,
+#                                                     riders: [@visitor3],
+#                                                     total_revenue: 4}]

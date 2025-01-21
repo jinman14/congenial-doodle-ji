@@ -46,6 +46,10 @@ class Carnival
     @summary[:visitors] = @visitors
     @summary[:rides] = @rides
 
+    # @rides.each do |ride|
+    #   @summary[:rides] << { ride: ride, riders: ride.rider_log, total_revenue: ride.total_revenue}
+    # end
+
     @summary
   end
 end
