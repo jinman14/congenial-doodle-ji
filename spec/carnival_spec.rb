@@ -71,7 +71,7 @@ RSpec.describe Carnival do
   end
 
   describe '#total_revenue' do
-    xit 'can add up total revenue from all rides' do
+    it 'can add up total revenue from all rides' do
       @carnival1.add_ride(@ride1)
       @carnival1.add_ride(@ride2)
       @carnival1.add_ride(@ride3)
