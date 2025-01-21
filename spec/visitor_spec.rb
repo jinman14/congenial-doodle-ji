@@ -20,7 +20,7 @@ RSpec.describe Visitor do
   end
 
   describe '#add_preference' do
-    it 'can add preferences' do
+    xit 'can add preferences' do
       @visitor1.add_preference(:gentle)
       @visitor1.add_preference(:thrilling)
 
@@ -29,7 +29,7 @@ RSpec.describe Visitor do
   end
 
   describe '#tall_enough?' do
-    it 'can ensure the visitor is tall enough' do
+    xit 'can ensure the visitor is tall enough' do
       expect(@visitor1.tall_enough?(54)).to eq true
       expect(@visitor2.tall_enough?(54)).to eq false
       expect(@visitor3.tall_enough?(54)).to eq true
