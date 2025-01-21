@@ -29,7 +29,7 @@ RSpec.describe Visitor do
   end
 
   describe '#tall_enough?' do
-    xit 'can ensure the visitor is tall enough' do
+    it 'can ensure the visitor is tall enough' do
       expect(@visitor1.tall_enough?(54)).to eq true
       expect(@visitor2.tall_enough?(54)).to eq false
       expect(@visitor3.tall_enough?(54)).to eq true
