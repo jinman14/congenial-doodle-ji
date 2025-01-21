@@ -26,4 +26,10 @@ class Ride
       @rider_log[rider] += 1 
     end
   end
+
+  def total_trips
+    @rider_log.sum do |rider, trips|
+      trips
+    end
+  end
 end

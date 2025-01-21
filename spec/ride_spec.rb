@@ -55,4 +55,14 @@ RSpec.describe Ride do
       expect(@ride3.total_revenue).to eq 2
     end
   end
+
+  describe '#total_trips' do
+    it 'can tell how many rides total a ride has given' do
+      @ride1.board_rider(@visitor1)
+      @ride1.board_rider(@visitor2)
+      @ride1.board_rider(@visitor1)
+      
+      expect(@ride1.total_trips).to eq 3
+    end
+  end
 end

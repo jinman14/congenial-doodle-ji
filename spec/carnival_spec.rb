@@ -41,7 +41,7 @@ RSpec.describe Carnival do
       expect(@carnival1.rides).to eq [@ride1, @ride2, @ride3]
     end
 
-    xit 'can tell the most popular ride' do
+    it 'can tell the most popular ride' do
       @carnival1.add_ride(@ride1)
       @carnival1.add_ride(@ride2)
       @carnival1.add_ride(@ride3)
