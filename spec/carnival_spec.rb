@@ -85,4 +85,37 @@ RSpec.describe Carnival do
       expect(@carnival1.total_revenue).to eq 7
     end
   end
+
+  describe 'iteration 4' do
+    it '#add visitor helper method' do
+      @carnival1.add_visitor(@visitor1)
+      @carnival1.add_visitor(@visitor2)
+      @carnival1.add_visitor(@visitor3)
+
+      expect(@carnival1.visitors).to eq [@visitor1, @visitor2, @visitor3]
+    end
+
+    it '#summary' do
+      @carnival1.add_ride(@ride1)
+      @carnival1.add_ride(@ride2)
+      @carnival1.add_ride(@ride3)
+
+      @carnival1.add_visitor(@visitor1)
+      @carnival1.add_visitor(@visitor2)
+      @carnival1.add_visitor(@visitor3)
+
+      @ride1.board_rider(@visitor1)
+      @ride1.board_rider(@visitor2)
+      @ride1.board_rider(@visitor1)
+      @ride3.board_rider(@visitor3)
+      @ride3.board_rider(@visitor3)
+
+      expect(@carnival1.summary).to eq ({
+                                          visitor_count: 3,
+                                          revenue_earned: 7,
+                                          visitors: [@visitor1, @visitor2, @visitor3],
+                                          rides: [@ride1, @ride2, @ride3]
+                                        })
+    end
+  end
 end
