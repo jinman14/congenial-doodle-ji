@@ -31,7 +31,7 @@ RSpec.describe Carnival do
   end
 
   describe 'rides at the carnival' do
-    xit 'can add rides' do
+    it 'can add rides' do
       expect(@carnival1.rides).to eq []
 
       @carnival1.add_ride(@ride1)
