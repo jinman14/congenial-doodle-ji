@@ -12,11 +12,13 @@ RSpec.describe Ride do
     @visitor1 = Visitor.new('Bruce', 54, '$10')
     @visitor2 = Visitor.new('Tucker', 36, '$5')
     @visitor3 = Visitor.new('Penny', 64, '$15')
+    @visitor4 = Visitor.new('Jacob', 70, "$0")
 
     @visitor1.add_preference(:gentle)
     @visitor2.add_preference(:gentle)
     @visitor2.add_preference(:thrilling)
     @visitor3.add_preference(:thrilling)
+    @visitor4.add_preference(:thrilling)
   end
 
   describe '#initialize' do
@@ -46,10 +48,12 @@ RSpec.describe Ride do
       @ride3.board_rider(@visitor1)
       @ride3.board_rider(@visitor2)
       @ride3.board_rider(@visitor3)
+      @ride3.board_rider(@visitor4)
 
       expect(@visitor1.spending_money).to eq 8
       expect(@visitor2.spending_money).to eq 4
       expect(@visitor3.spending_money).to eq 13
+      expect(@visitor4.spending_money).to eq 0
 
       expect(@ride3.rider_log).to eq({@visitor3 => 1})
       expect(@ride3.total_revenue).to eq 2
